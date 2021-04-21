@@ -1,72 +1,45 @@
 class Complex:
-    def initComplex(self):
-        self.x = int(input("Enter the Real Part: "))
-        self.y = int(input("Enter the Imaginary Part: "))            
-    def display(self):
-        print(self.x,"+",self.y,"i", sep="")
+    def __init__(self):
+        self.x = 0
+        self.y= 0
+        self.p = 0 
+        self.q = 0            
+    def __str__ (self,x,y,p,q):
+        self.x=x
+        self.y=y
+        self.p=p
+        self.q=q
+        print("first complex numebrrrr",self.x,"+",self.y,"i", sep="")
+        print("second complex number:",self.p,"+",self.q,"i", sep="")
 
-    def addition(self,c1,c2):
-        imaginary=c1.x+c2.x
-        realpart=c1.y+c2.y
+    def addition(self,x,y,p,q):
+        imaginary=x+p
+        realpart=y+q
         
         print("addition-total:",imaginary,"+","i",realpart,sep="")
     
-    def substraction(self,c1,c2):
-        imaginary=c1.x-c2.x
-        realpart=c1.y-c2.y
+    def substraction(self,x,y,p,q):
+        imaginary=x-p
+        realpart=y-q
                
-        print("substraction -total:",imaginary,"+","i",realpart,sep="")
+        print("substraction total:",imaginary,"+",realpart,"i",sep="")
 
-    def multiplication(self,c1,c2):
-        real=(c1.x*c2.x)-(c1.y*c2.y)
+    def multiplication(self,x,y,p,q):
+        real=(x*p)-(y*q)
         print("realll",real)
-        imaginary=str((c1.x*c2.y)+(c2.x*c1.y))
+        imaginary=str((x*q)+(p*y))
         print("imaginary:"+"i"+str(imaginary))
         #print(":",str(real),"+",imaginary)
-        print("output mul",real,"+","i",imaginary,sep="")
+        print("output multiplication:",real,"+","i",imaginary,sep="")
         
         
-    def division(self,c1,c2):
+    def division(self,x,y,p,q):
         print("division")
-        pass
-        #first_part=(((c1.x)*(c2.x))-((c1.y*c2.y)))/(((c2.x*c2.x)-(c2.y*c2.y)))
-        #second_part=(((str((c1.y)*str(c2.x)))+"i")-((str(c1.x))*(c2.y)+"i"))/(((c2.x*c2.x)-(c2.y*c2.y)))
-        #division_result=first_part/second_part
-        #print("firsttparttt",first_part)
-
-        #print("secondparttt",second_part)
-       # print("division_result:",division_result)
-
-
-c1=Complex()
-c2=Complex()
-c3=Complex()
-print("first")
-c1.initComplex()
-c1.display()
-print("sedcondddddd")
-c2.initComplex()
-c2.display()
-c3.addition(c1,c2)
-c3.substraction(c1,c2)
-c3.multiplication(c1,c2)
-c3.division(c1,c2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         
+        first_part=(((x)*(p))-((y*q)))/(((p*p)-(q*q)))
+        second_part=((((y)*(str(p)))+"i")-((x)*(q)+"i"))/((p*p)-(q*q))
+        division_result=first_part/second_part
+        print("firsttparttt",first_part)
 
-
+        print("secondparttt",second_part)
+        print("division_result:",division_result)

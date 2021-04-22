@@ -7,15 +7,16 @@ def run():
     p=int(input("enter the second_real part:"))
     q=int(input("enter the second_imaginary part:"))
 
-    obj1=Complex() 
-    obj2=Complex()
-    obj3=Complex()
+    obj1=Complex(x,y) 
+    obj1.display()
+    obj2=Complex(p,q)
+    obj1.addition(obj2)
+    obj1.substraction(obj2)
+    obj1.multiplication(obj2)
+    obj1.division(obj2)
+
+
     
-    c1=obj1.__str__(x,y,p,q)
-    obj1.addition(x,y,p,q)
-    obj1.substraction(x,y,p,q)
-    obj1.multiplication(x,y,p,q)
-    obj1.division(x,y,p,q)
     
 
     
